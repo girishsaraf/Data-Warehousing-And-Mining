@@ -8,7 +8,6 @@ Although incidences of credit card fraud are limited to about 0.1% of all card t
 Credit Card Fraud costs banks millions of dollars a year in reimbursement, legal fees, and mitigation. Denying fraudulent transactions before they occur would greatly reduce expenses. In this project, we use a publically available dataset of 6.3 million credit card transactions and each is categorized as Fraud or Not Fraud. 
 The result variable is Categorical & Binary.  False-positives are a major concern since we will deny any transactions that are flagged fraudulent forcing the customer to call customer service to complete the transaction. I test each model against 100,000 random transactions categorized as Not Fraud to estimate the false-positive rate.
 # Data pre-processing
-Dataset Preview
  
 # Processing the Data Attributes value by value:
 
@@ -34,8 +33,6 @@ The pattern followed while testing the SVM model is:
 4. Compare model against a 100k sample of Not Fraud cases to determine the expected false-positives.
 
 In each of the models we will also track the time to create the model.
-
-# Code Snippet:
   
 # Results achieved
 
