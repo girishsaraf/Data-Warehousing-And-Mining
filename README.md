@@ -13,12 +13,19 @@ We also filter based on the type of transactions since the specific types of tra
 	Then we eliminate the highly correlated features as it may affect the efficiency of the overall model. Correlated features in general don't improve models (although it depends on the specifics of the problem like the number of variables and the degree of correlation), but they affect specific models in different ways and to varying extents. For linear models, multicollinearity can yield solutions that are wildly varying and possibly numerically unstable. Random forests can be good at detecting interactions between different features, but highly correlated features can mask these interactions. Support Vector machines can be affected when the features included are highly correlated. Then we divide the newly generated dataset into train, test and validate sets in order to implement the model of SVM and check the results generated.
 # Algorithm Used
 # Support Vector Machine:
-In machine learning, support vector machines (SVMs, also support vector networks) are supervised  learning models with associated learning algorithms that analyze data used for classification and regression analysis. Given a set of training examples, each marked as belonging to one or the other of two categories, an SVM training algorithm builds a model that assigns new examples to one category or the other, making it a non-probabilistic binary linear classifier (although methods such as Platt scaling exist to use SVM in a probabilistic classification setting). An SVM model is a representation of the examples as points in space, mapped so that the examples of the separate categories are divided by a clear gap that is as wide as possible. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall.
+In machine learning, support vector machines (SVMs, also support vector networks) are supervised  learning models with associated learning algorithms that analyze data used for classification and regression analysis. 
+Given a set of training examples, each marked as belonging to one or the other of two categories, an SVM training algorithm builds a model that assigns new examples to one category or the other, making it a non-probabilistic binary linear classifier (although methods such as Platt scaling exist to use SVM in a probabilistic classification setting). An SVM model is a representation of the examples as points in space, mapped so that the examples of the separate categories are divided by a clear gap that is as wide as possible. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall.
+
 The pattern followed while testing the SVM model is:
+
 1. fit the model to the data
+
 2. Compare model against the data it was trained on
+
 3. Compare model against the test dataset that was unknown for model building
+
 4. Compare model against a 100k sample of Not Fraud cases to determine the expected false-positives.
+
 In each of the models we will also track the time to create the model.
 
 # Code Snippet:
