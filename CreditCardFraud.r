@@ -1,3 +1,9 @@
+#   Libraries need to be run for the code to run
+#   Link for Dataset: https://www.kaggle.com/ntnu-testimon/paysim1
+#   Dataset size is approx 400+ MB
+#   Dataset on kaggle
+#   Code has both data preprocessing and machine development lines.
+
 library(plyr)
 library(tidyverse)
 library(caret)
